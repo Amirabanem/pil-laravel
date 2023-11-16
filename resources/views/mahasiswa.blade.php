@@ -44,6 +44,135 @@
   <div class="container" style="margin-left: 30px">
 
     <h1>Ini adalah halaman Mahasiswa</h1>
+
+    {{-- 
+      ROWSPAN = MENGGABUNGKAN BARIS
+      COLSPAN = MENGGABUNGKAN KOLOM
+      --}}
+
+
+      <div class="row">
+      <div class="col-sm-6">
+        <h4>Table Mahasiswa</h4>
+        <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
+          <thead>
+            <tr>
+              <th>NPM</th>
+              <th>Nama Mahasiswa</th>
+              <th>Jenis Kelamin</th>
+              <th colspan="2">TTL</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            @for ($i = 0; $i < $jumlah; $i++)
+            <tr>
+              <td>{{ $npm [$i]}}</td>
+              <td>{{ $nama [$i]}}</td>
+              <td> Perempuan</td>
+              <td> Kota Medan</td>
+            </tr>
+             
+            @endfor
+    
+    
+            
+            {{--<//?php $nilai_awal = 0; ?>
+            @while ($nilai_awal < $jumlah)
+                
+            <tr>
+              <td>{{ $npm[$nilai_awal]}}</td>
+              <td>{{ $nama[$nilai_awal]}}</td>
+              <td>Perempuan</td>
+              <td>10-3-2002</td>
+              <td>Medan</td>
+            </tr>
+    
+            <//?php $nilai_awal++ ?>
+            @endwhile
+            --}}
+            
+    
+    
+    
+            {{--
+            <tr>
+              <td>124</td>
+              <td>Lala</td>
+              <td>Perempuan</td>
+              <td>27-7-2003</td>
+              
+            </tr>
+    
+            <tr>
+              <td>125</td>
+              <td>Rani</td>
+              <td>Perempuan</td>
+              <td>15-5-2005</td>
+              
+            </tr>
+            --}}
+    
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h4>Form Mahasiswa</h4>
+        <form action="" method="GET">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="">NPM</label>
+              <input type="number" name="npm" class="form-control" placeholder="Input NPM">
+
+            
+          </div>
+          <div class="col-sm-6">
+            <label for="">Nama Mahasiswa</label>
+            <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Input Nama">
+
+          </div>
+      </div>
+    
+    <div class="row">
+      <div class="com-sm-6">
+        <label for="">Tanggal Lahir</label>
+        <input type="date" name="tgl_lahir" class="form-control">
+
+      </div>
+      <div class="col-sm-6">
+        <label for="">Prodi</label>
+        <select name="prodi" class="form-control">
+        <option>Sistem Informasi</option>
+        <option>Teknik Informasi</option>
+        <option>Sains Data</option>
+      </select>
+      </div>
+
+      
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <button class="btn btn-primary" style="width: 100%" type="submit">Simpan</button>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+
+
+  </div>
+        </form>
+      </div>
+
+
+
+
  
    </div>
 
